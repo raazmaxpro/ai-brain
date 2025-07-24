@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pattern Genius</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>⚡ Pattern Genius</h1>
+
+    <div class="card glass-form">
+      <div class="form-row">
+        <input type="text" id="period" placeholder="Enter Period Number" />
+        <select id="bigSmall">
+          <option value="Big">Big</option>
+          <option value="Small">Small</option>
+        </select>
+        <select id="color">
+          <option value="Red">Red</option>
+          <option value="Green">Green</option>
+        </select>
+      </div>
+
+      <div class="button-row">
+        <button id="saveBtn">💾 Save</button>
+        <button id="endSessionBtn">🔚 End Session</button>
+      </div>
+
+      <div class="card prediction-panel">
+  <h2>🔮 AI Prediction</h2>
+  <div id="predictionSection" style="margin-top: 20px;">
+    <p id="predictionText" style="font-weight: bold; color: rgb(255, 255, 255); margin-top: 5px;"></p>
+  🎯 Prediction will appear here...
+</div>
+</div>
+
+    </div>
+
+    <div class="card glass-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Period</th>
+            <th>Big/Small</th>
+            <th>Color</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Dynamic rows will go here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+<!-- Firebase CDN scripts (add in your HTML <head> or before closing </body>) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
