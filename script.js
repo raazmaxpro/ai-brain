@@ -14,7 +14,7 @@ firebase.initializeApp(firebaseConfig);
 
 // End session button Logic
   document.getElementById("endSessionBtn").addEventListener("click", () => {
-    fetch("http://localhost:8000/end-session", {
+    fetch("https://raazmaxpro.github.io/ai-brain/end-session", {
       method: "POST"
     })
     .then(res => res.text())
@@ -28,7 +28,7 @@ firebase.initializeApp(firebaseConfig);
 
 // Data pull
 function fetchPrediction() {
-    fetch('http://localhost:8000/get-latest-predictions')
+    fetch('https://raazmaxpro.github.io/ai-brain/get-latest-predictions')
     .then(response => response.json())
     .then(data => {
         document.getElementById('predictionSection').innerHTML = `
@@ -82,7 +82,7 @@ document.getElementById("saveBtn").addEventListener("click", function () {
       document.getElementById("color").selectedIndex = 0;
 
       // 🧠 Call actual AI backend for prediction
-      fetch("http://localhost:8000/latest-prediction")
+      fetch("https://raazmaxpro.github.io/ai-brain/latest-prediction")
         .then((response) => {
           if (!response.ok) {
             throw new Error("No prediction found");
